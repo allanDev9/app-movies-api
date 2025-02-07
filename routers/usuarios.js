@@ -1,14 +1,14 @@
 import express from "express";
-import usuarios from "../modelos/usuariosModelo.js";
+import Usuarios from "../modelos/usuariosModelo.js";
 const router = express.Router();
 
 router.get("/", async (req, res) => {
     try {
-        const usuarios = await usuarios.find()
-        res.send(empleados);
+        const listUsuarios = await Usuarios.find()
+        res.send(listUsuarios);
     } catch (error) {
         console.log(error);
-        res.status(500).send("No se encontraron empleados");
+        res.status(500).send("No se encontraron usuarios");
     }
 });
 

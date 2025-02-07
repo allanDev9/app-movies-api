@@ -1,7 +1,7 @@
 import express from 'express';
-import peliculasRoutes from './usuarios.js';
+import usuariosRoutes from './usuarios.js';
 const router = express.Router();
 
-router.use('/peliculas', peliculasRoutes);
+router.use('/usuarios', usuariosRoutes);
 
 export default router;
